@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="whitecolor">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey">#a7a6a6</color>
+
+    <color name="lightblue">#30bcf1</color>
+    <color name="lightgreen">#34c127</color>
+
+
+    <color name="logoblue">#157ac8</color>
+    <color name="logoblue1">#1895f5</color>
+    <color name="logoblue2">#37a3f5</color>
+    <color name="errorred">#e8084b</color>
+
+
+    <color name="grad_1">#3ca3f1</color>
+    <color name="grad_2">#8fd8f5</color>
+    <color name="grad_3">#93f7f4</color>
+    <color name="loginimagebgclr">#046299</color>
+
+    <color name="overlaybg">#79ffffff</color>
+
+</resources>

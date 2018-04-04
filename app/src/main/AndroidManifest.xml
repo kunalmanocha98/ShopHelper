@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kunal.shophelper">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/launcherlogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/launcherlogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Acitivites.LoginActivity"
+            android:theme="@style/notitlebar" />
+        <activity android:name=".Acitivites.SelectionPage" />
+        <activity android:name=".Acitivites.Client_MenuPage" />
+        <activity android:name=".Acitivites.Client_addnew" />
+        <activity android:name=".Acitivites.Transaction_listofnames" />
+        <activity android:name=".Acitivites.Transaction" />
+        <activity android:name=".Acitivites.Transaction_Menupage" />
+        <activity android:name=".Acitivites.ChatActivity" />
+        <activity android:name=".Acitivites.Client_Totalbalance" />
+        <activity android:name=".Acitivites.DealerMenuActivity" />
+        <activity android:name=".Acitivites.ClientCalendarPage" />
+        <activity android:name=".Acitivites.AddNoteActivity" />
+        <activity android:name=".Acitivites.NotePreviewActivity" />
+        <activity
+            android:name=".Acitivites.SplashActivity"
+            android:theme="@style/MyTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Acitivites.LoginPreview"
+            android:theme="@style/notitlebar" />
+        <activity android:name=".Acitivites.GetPhoneNumber"
+            android:theme="@style/notitlebar"
+            android:windowSoftInputMode="adjustResize">
+
+        </activity>
+    </application>
+
+</manifest>
