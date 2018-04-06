@@ -1,46 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.kunal.shophelper.Acitivites.Transaction">
 
-    <TextView
+    <com.example.kunal.shophelper.Fonts.MyCustonTextView
+        android:id="@+id/txt_client_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="16dp"
+        android:text="Clientname"
+        android:textSize="42sp"
+        android:textColor="@color/black"/>
+    <com.example.kunal.shophelper.Fonts.MyCustonTextView
         android:id="@+id/txt_balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp"
-        android:text="TextView"
-        tools:text="balance"
-        android:textSize="40dp"
-        android:textColor="#000000"/>
+        android:text="balance"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_client_name"
+        android:layout_marginTop="24dp"
+        />
 
-    <EditText
+    <com.example.kunal.shophelper.Fonts.MyCustomEditText
         android:id="@+id/edttxt_amount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_balance"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:ems="10"
-        android:hint="enter amount in rs"
-        android:inputType="textPersonName" />
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Enter amount in rs"
+        android:inputType="number"
+        android:background="@drawable/customedittexttransaction"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_submitamount"
+        app:layout_constraintTop_toBottomOf="@id/txt_balance"
+        android:layout_marginTop="36dp"/>
 
     <Button
         android:id="@+id/btn_submitamount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custombuttontransaction"
         android:layout_below="@+id/edttxt_amount"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp"
-        android:text="Submit" />
+        android:text="Submit"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/whitecolor"
+        app:layout_constraintLeft_toRightOf="@id/edttxt_amount"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_balance"
+        android:layout_marginTop="36dp"/>
+    <ImageView
+        android:id="@+id/callicon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/callicon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/locationicon"
+        app:layout_constraintBottom_toTopOf="@id/historytext"/>
+    <ImageView
+        android:id="@+id/locationicon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/locationicon"
+        app:layout_constraintLeft_toRightOf="@id/callicon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/historytext"/>
+
+    <com.example.kunal.shophelper.Fonts.MyCustonTextView
+        android:id="@+id/historytext"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:background="@color/black"
+        android:text="History"
+        android:textAlignment="center"
+        android:textColor="@color/whitecolor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_datewisebalancelist"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_alignParentBottom="true">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/historytext">
     </android.support.v7.widget.RecyclerView>
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

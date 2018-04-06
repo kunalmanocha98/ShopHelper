@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.kunal.shophelper.Acitivites.Transaction;
 import com.example.kunal.shophelper.Acitivites.Transaction_listofnames;
+import com.example.kunal.shophelper.Fonts.MyCustonTextView;
 import com.example.kunal.shophelper.R;
 
 import java.util.ArrayList;
@@ -38,8 +39,8 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        holder.txt_name.setText(data.get(position));
-        holder.rl_clickable.setOnClickListener(new View.OnClickListener() {
+        holder.client_name.setText(data.get(position));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(c,Transaction.class);
@@ -55,12 +56,11 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         return data.size();
     }
     public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView txt_name;
-        RelativeLayout rl_clickable;
+        MyCustonTextView client_name;
         public ViewHolder(View itemView) {
             super(itemView);
-            txt_name=itemView.findViewById(R.id.txt_name);
-            rl_clickable=itemView.findViewById(R.id.rl_clickable);
+            client_name=itemView.findViewById(R.id.clientname);
+
         }
     }
 }
