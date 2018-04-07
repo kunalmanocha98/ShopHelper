@@ -27,9 +27,9 @@ public class Client_addnew extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.client_addnew);
-        name = findViewById(R.id.edttxt_name);
-        shop_number = findViewById(R.id.edttxt_shopnumber);
-        phone_number = findViewById(R.id.edttxt_phonenumber);
+        name = findViewById(R.id.edt_name);
+        shop_number = findViewById(R.id.edt_shopno);
+        phone_number = findViewById(R.id.edt_shopno);
         btn_add = findViewById(R.id.btn_add);
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override

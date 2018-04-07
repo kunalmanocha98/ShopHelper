@@ -1,52 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.kunal.shophelper.Acitivites.Client_addnew">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/namelayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/shoplayout">
+        <com.example.kunal.shophelper.Fonts.MyCustonTextView
+            android:id="@+id/one"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            android:text="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="16dp"
+            android:textAlignment="center"
+            android:textColor="@color/whitecolor"
+            android:textSize="18sp"
+            android:background="@drawable/formtextviewbg"
+            android:textStyle="bold"/>
+        <com.example.kunal.shophelper.Fonts.MyCustomEditText
+            android:id="@+id/edt_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:maxLines="1"
+            app:layout_constraintTop_toBottomOf="@id/one"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="16dp"
+            android:hint="Name"/>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/shoplayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/namelayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/phonelayout">
+        <com.example.kunal.shophelper.Fonts.MyCustonTextView
+            android:id="@+id/two"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            android:text="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="16dp"
+            android:textAlignment="center"
+            android:textColor="@color/whitecolor"
+            android:textSize="18sp"
+            android:background="@drawable/formtextviewbg"
+            android:textStyle="bold"/>
+        <com.example.kunal.shophelper.Fonts.MyCustomEditText
+            android:id="@+id/edt_shopno"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/two"
+            android:maxLines="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="16dp"
+            android:hint="Shop number"/>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/phonelayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/shoplayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/locationlayout">
+        <com.example.kunal.shophelper.Fonts.MyCustonTextView
+            android:id="@+id/three"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            android:text="3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="16dp"
+            android:textAlignment="center"
+            android:textColor="@color/whitecolor"
+            android:textSize="18sp"
+            android:background="@drawable/formtextviewbg"
+            android:textStyle="bold"/>
+        <com.example.kunal.shophelper.Fonts.MyCustomEditText
+            android:id="@+id/edt_phone"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:maxLines="1"
+            app:layout_constraintTop_toBottomOf="@id/three"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="16dp"
+            android:hint="Mobile number"/>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/locationlayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/phonelayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/addbtnlayout">
+        <com.example.kunal.shophelper.Fonts.MyCustonTextView
+            android:id="@+id/four"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            android:text="4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="16dp"
+            android:textAlignment="center"
+            android:textColor="@color/whitecolor"
+            android:textSize="18sp"
+            android:background="@drawable/formtextviewbg"
+            android:textStyle="bold"/>
+        <com.example.kunal.shophelper.Fonts.MyCustomEditText
+            android:id="@+id/edt_location"
+            android:maxLines="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/four"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="16dp"
+            android:hint="Location(Optional)"/>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/addbtnlayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/locationlayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_bias="0.7"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="ADD"
+            android:background="@drawable/formbuttonbg"
+            android:textColor="@color/whitecolor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    <EditText
-        android:id="@+id/edttxt_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="54dp"
-        android:ems="10"
-        android:hint="name"
-        android:inputType="textPersonName" />
+    </android.support.constraint.ConstraintLayout>
 
-    <EditText
-        android:id="@+id/edttxt_shopnumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/edttxt_name"
-        android:layout_below="@+id/edttxt_name"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:hint="shop number"
-        android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/edttxt_phonenumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/edttxt_shopnumber"
-        android:layout_below="@+id/edttxt_shopnumber"
-        android:layout_marginTop="60dp"
-        android:ems="10"
-        android:hint="phone number"
-        android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/btn_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/edttxt_phonenumber"
-        android:layout_below="@+id/edttxt_phonenumber"
-        android:layout_marginEnd="53dp"
-        android:layout_marginTop="93dp"
-        android:text="ADD" />
-</RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

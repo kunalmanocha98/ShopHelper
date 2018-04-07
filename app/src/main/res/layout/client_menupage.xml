@@ -7,10 +7,10 @@
     tools:context="com.example.kunal.shophelper.Acitivites.Client_MenuPage">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/transactionlayout"
+        android:id="@+id/transactionlayout_dealer"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/balancelayout"
+        app:layout_constraintBottom_toTopOf="@id/balancelayout_dealer"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -70,13 +70,13 @@
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/balancelayout"
+        android:id="@+id/balancelayout_dealer"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/addnewlayout"
+        app:layout_constraintBottom_toTopOf="@id/addnewlayout_dealer"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/transactionlayout">
+        app:layout_constraintTop_toBottomOf="@id/transactionlayout_dealer">
 
         <android.support.v7.widget.CardView
             android:layout_width="0dp"
@@ -133,13 +133,13 @@
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/addnewlayout"
+        android:id="@+id/addnewlayout_dealer"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/calendarlayout"
+        app:layout_constraintBottom_toTopOf="@id/calendarlayout_dealer"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/balancelayout">
+        app:layout_constraintTop_toBottomOf="@id/balancelayout_dealer">
 
         <android.support.v7.widget.CardView
             android:layout_width="0dp"
@@ -195,13 +195,13 @@
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/calendarlayout"
+        android:id="@+id/calendarlayout_dealer"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/chatlayout"
+        app:layout_constraintBottom_toTopOf="@id/chatlayout_dealer"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/addnewlayout">
+        app:layout_constraintTop_toBottomOf="@id/addnewlayout_dealer">
 
         <android.support.v7.widget.CardView
             android:layout_width="0dp"
@@ -257,13 +257,13 @@
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/chatlayout"
+        android:id="@+id/chatlayout_dealer"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/calendarlayout">
+        app:layout_constraintTop_toBottomOf="@id/calendarlayout_dealer">
 
         <android.support.v7.widget.CardView
             android:layout_width="0dp"
