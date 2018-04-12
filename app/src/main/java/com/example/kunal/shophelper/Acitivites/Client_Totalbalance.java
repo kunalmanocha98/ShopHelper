@@ -43,6 +43,7 @@ public class Client_Totalbalance extends AppCompatActivity {
         rv_totalbalance = findViewById(R.id.rv_totalbalance);
         rv_totalbalance.setLayoutManager(layoutManager);
         piechart=findViewById(R.id.piechart);
+        setTitle("Total Balance");
         setuppiechart();
         ref.addValueEventListener(new ValueEventListener() {
             @Override

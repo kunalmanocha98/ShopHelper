@@ -66,11 +66,27 @@
         <item name="colorPrimaryDark">#000000</item>
     </style>
     <style name="themetransaction" parent="AppTheme">
-        <item name="android:windowSoftInputMode">
-        </item>
         <item name="windowNoTitle">true</item>
         <item name="colorPrimary">#000000</item>
         <item name="colorPrimaryDark">#000000</item>
     </style>
 
+    <style name="themetotalbalance" parent="AppTheme">
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+    <style name="themeaddnew" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+    <style name="themecalendar" parent="AppTheme">
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+    <style name="themechat" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
 </resources>
