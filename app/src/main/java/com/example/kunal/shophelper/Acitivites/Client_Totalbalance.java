@@ -50,7 +50,6 @@ public class Client_Totalbalance extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterable<DataSnapshot> arr = dataSnapshot.getChildren();
                 while (arr.iterator().hasNext()) {
-                    String namevalue = arr.iterator().next().getKey();
                     String name=(arr.iterator().next().getKey());
                     String shopnumber= (String) dataSnapshot.child(name).child("personal information").child("shopnumber").getValue();
                     String phonenumber=(String) dataSnapshot.child(name).child("personal information").child("phonenumber").getValue();
@@ -78,7 +77,7 @@ public class Client_Totalbalance extends AppCompatActivity {
 
         PieData data=new PieData(dataSet);
         data.setValueTextSize(10f);
-        data.setValueTextColor(Color.CYAN);
+        data.setValueTextColor(Color.BLACK);
          piechart.setData(data);
 
     }
