@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -25,11 +28,14 @@ public class DealerMenuActivity extends AppCompatActivity {
         btn_calendar=findViewById(R.id.calendarlayout_dealer);
         btn_dealer_transaction=findViewById(R.id.transactionlayout_dealer);
         addnew=findViewById(R.id.addnewlayout_dealer);
+        setTitle("Dealer");
         balance=findViewById(R.id.balancelayout_dealer);
         balance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DealerMenuActivity.this, "wait for sometime", Toast.LENGTH_SHORT).show();
+                Intent i=new Intent(DealerMenuActivity.this,Client_Totalbalance.class);
+                Constants.ServiceType="DEALERS";
+                startActivity(i);
             }
         });
         addnew.setOnClickListener(new View.OnClickListener() {
@@ -66,4 +72,25 @@ public class DealerMenuActivity extends AppCompatActivity {
         });
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.mymenu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logout:{
+                Constants.clearalldata(this);
+                Intent i = new Intent(this, SplashActivity.class);
+                startActivity(i);
+                break;
+            }
+
+        }
+        return true;
+    }
+
 }

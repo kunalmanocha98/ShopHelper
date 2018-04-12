@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.kunal.shophelper.Acitivites.DealerMenuActivity">
-
-    <android.support.constraint.ConstraintLayout
+ <android.support.constraint.ConstraintLayout
         android:id="@+id/transactionlayout_dealer"
         android:layout_width="0dp"
         android:layout_height="0dp"

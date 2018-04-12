@@ -7,15 +7,70 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/black</item>
     </style>
-    <style name="MyTheme"  parent="Theme.AppCompat.Light.NoActionBar">
+
+    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
     </style>
-    <style name="notitlebar" parent="AppTheme">
+
+    <style name="themeloginpreview" parent="AppTheme">
         <item name="android:windowContentTransitions">true</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:windowSharedElementEnterTransition">@transition/sharedelementspeed</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/sharedelementspeed
+        </item>
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+
+    </style>
+
+    <style name="themegetphonenumber" parent="AppTheme">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/sharedelementspeed
+        </item>
         <item name="android:windowSoftInputMode"></item>
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+
+    <style name="themeloginactivity" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+
+    <style name="thememenuactivity" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+
+    <style name="themeclientmenu" parent="AppTheme">
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+
+    <style name="themedealermenu" parent="AppTheme">
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+
+    <style name="themetransactionmenu" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+
+    <style name="themetransactionlist" parent="AppTheme">
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+    <style name="themetransaction" parent="AppTheme">
+        <item name="android:windowSoftInputMode">
+        </item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
     </style>
 
 </resources>

@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         iptxt_pass = findViewById(R.id.iptxt_pass);
         btn_signin = findViewById(R.id.btn_signin);
         signout = findViewById(R.id.logout);
-        signout.setOnClickListener(this);
+        signout.setVisibility(View.GONE);
         Auth = FirebaseAuth.getInstance();
         btn_signin.setOnClickListener(this);
         checkprefs();
@@ -49,10 +49,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 showdialog();
                 signin();
             }
-        } else if (view.getId() == signout.getId()) {
-            Constants.clearalldata(this);
-            Intent i = new Intent(this, SplashActivity.class);
-            startActivity(i);
         }
     }
 
@@ -72,14 +68,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //                            Toast.makeText(LoginActivity.this, "Authentication successfull", Toast.LENGTH_SHORT).show();
                             Intent i = new Intent(LoginActivity.this, SelectionPage.class);
                             startActivity(i);
+                            finish();
                             if (dialog.isShowing()){
                                 dialog.dismiss();
                             }
                         } else {
-//                            Toast.makeText(LoginActivity.this, "Authentication failed.",
-//                                    Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(LoginActivity.this, SelectionPage.class);
-                            startActivity(i);
+                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                            if (dialog.isShowing()){
+                                dialog.dismiss();
+                            }
+//                            Intent i = new Intent(LoginActivity.this, SelectionPage.class);
+//                            startActivity(i);
                         }
 
                     }

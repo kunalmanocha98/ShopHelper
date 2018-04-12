@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.kunal.shophelper.HelperClasses.Constants;
+import com.example.kunal.shophelper.Models.Transactiondata;
 import com.example.kunal.shophelper.R;
 import com.example.kunal.shophelper.Adapter.TransactionAdapter;
 import com.google.firebase.database.DataSnapshot;
@@ -15,12 +16,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Transaction_listofnames extends AppCompatActivity {
     RecyclerView clientcredit_rv;
     TransactionAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
-    ArrayList<String> data=new ArrayList<>();
+    List<Transactiondata> list=new ArrayList<>();
     FirebaseDatabase database=FirebaseDatabase.getInstance();
     DatabaseReference ref=database.getReference(Constants.ServiceType);
 //    boolean switcher;
@@ -32,15 +34,21 @@ public class Transaction_listofnames extends AppCompatActivity {
         clientcredit_rv=findViewById(R.id.clientcredit_rv);
         layoutManager= new LinearLayoutManager(this);
         clientcredit_rv.setLayoutManager(layoutManager);
+        setTitle("LIST OF "+Constants.ServiceType);
 //        Bundle bundle=getIntent().getExtras();
 //        switcher=bundle.getBoolean("switcher");
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterable<DataSnapshot> arr=dataSnapshot.getChildren();
-                data.clear();
+                list.clear();
                 while(arr.iterator().hasNext()){
-                    data.add(arr.iterator().next().getKey());
+                    String name=(arr.iterator().next().getKey());
+                    String shopnumber= (String) dataSnapshot.child(name).child("personal information").child("shopnumber").getValue();
+                    String phonenumber=(String) dataSnapshot.child(name).child("personal information").child("phonenumber").getValue();
+                    String totalbalance=(String) dataSnapshot.child(name).child("balance").child("total").getValue();
+                    Transactiondata data=new Transactiondata(name,shopnumber,phonenumber,totalbalance);
+                     list.add(data);
                 }
                 recyclerview();
             }
@@ -53,7 +61,7 @@ public class Transaction_listofnames extends AppCompatActivity {
 
     }
     private void recyclerview() {
-        adapter=new TransactionAdapter(this,data);
+        adapter=new TransactionAdapter(this,list);
         clientcredit_rv.setAdapter(adapter);
     }
 

@@ -126,8 +126,11 @@
         android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:text="logout"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="124dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signin"
+        tools:layout_editor_absoluteX="165dp" />
 </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>

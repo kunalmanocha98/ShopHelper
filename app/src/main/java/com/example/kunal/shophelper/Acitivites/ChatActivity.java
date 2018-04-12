@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.example.kunal.shophelper.Adapter.ChatAdapter;
+import com.example.kunal.shophelper.HelperClasses.Constants;
 import com.example.kunal.shophelper.Models.ChatdataValues;
 import com.example.kunal.shophelper.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,7 +38,7 @@ public class ChatActivity extends AppCompatActivity {
     ImageButton btn_send;
     EditText edt_msg;
     DatabaseReference root;
-    String temp_key,usr_email,databasechild;
+    String temp_key,usrPhone,databasechild;
     List<ChatdataValues> list=new ArrayList<>();
     List<ChatdataValues> list2=new ArrayList<>();
     @Override
@@ -47,7 +48,7 @@ public class ChatActivity extends AppCompatActivity {
         databasechild=getIntent().getExtras().getString("child");
         recyclerView=findViewById(R.id.rv_chat);
         recyclerView.setLayoutManager(layoutManager);
-        usr_email=FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        usrPhone= Constants.getstoredata(Constants.PhoneNumber,"default",this);
         root=FirebaseDatabase.getInstance().getReference("CHAT").child(databasechild);
         btn_send=findViewById(R.id.btn_send);
         edt_msg=findViewById(R.id.msg_input);
@@ -62,7 +63,7 @@ public class ChatActivity extends AppCompatActivity {
                 DatabaseReference message_root = root.child(temp_key);
                 Map<String, Object> map2 = new HashMap<>();
                 map2.put("msg", edt_msg.getText().toString());
-                map2.put("email",usr_email);
+                map2.put("email",usrPhone);
                 message_root.updateChildren(map2);
                 edt_msg.setText("");
             }
@@ -107,7 +108,7 @@ public class ChatActivity extends AppCompatActivity {
             list.add(v);
         }
         list2.addAll(list);
-        adapter=new ChatAdapter(this,list2,usr_email);
+        adapter=new ChatAdapter(this,list2,usrPhone);
         recyclerView.setAdapter(adapter);
         int position=recyclerView.getAdapter().getItemCount()-1;
         recyclerView.scrollToPosition(position);

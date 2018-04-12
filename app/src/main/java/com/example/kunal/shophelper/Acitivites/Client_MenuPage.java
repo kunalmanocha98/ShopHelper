@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.example.kunal.shophelper.HelperClasses.Constants;
@@ -27,6 +30,28 @@ ConstraintLayout btn_transactionmenu,btn_balance,btn_addclient,btn_calendar,btn_
         btn_balance.setOnClickListener(this);
         btn_calendar.setOnClickListener(this);
         btn_chat.setOnClickListener(this);
+        setTitle("Client");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.mymenu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logout:{
+                Constants.clearalldata(this);
+                Intent i = new Intent(this, SplashActivity.class);
+                startActivity(i);
+                break;
+            }
+
+        }
+        return true;
     }
 
     @Override
@@ -42,6 +67,7 @@ ConstraintLayout btn_transactionmenu,btn_balance,btn_addclient,btn_calendar,btn_
             case R.id.balancelayout_dealer:{
                 Intent i=new Intent(Client_MenuPage.this,Client_Totalbalance.class);
                 startActivity(i);
+                Constants.ServiceType="CLIENTS";
                 break;
             }
             case R.id.addnewlayout_dealer:{
@@ -53,6 +79,7 @@ ConstraintLayout btn_transactionmenu,btn_balance,btn_addclient,btn_calendar,btn_
             case R.id.calendarlayout_dealer:{
                 Intent i=new Intent(Client_MenuPage.this,ClientCalendarPage.class);
                 startActivity(i);
+                Constants.ServiceType="CLIENTS";
 //                Toast.makeText(this, "clendar is not available", Toast.LENGTH_SHORT).show();
                 break;
             }
