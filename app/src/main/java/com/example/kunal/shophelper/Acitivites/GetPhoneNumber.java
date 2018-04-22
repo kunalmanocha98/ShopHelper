@@ -40,8 +40,6 @@ public class GetPhoneNumber extends AppCompatActivity implements View.OnClickLis
         v = findViewById(R.id.rootviewgroup);
         fab.setOnClickListener(this);
         edt_mobilenumber.setOnClickListener(this);
-//        edt_mobilenumber.setFocusable(true);
-//        edt_mobilenumber.setFocusableInTouchMode(true);
 
     }
 

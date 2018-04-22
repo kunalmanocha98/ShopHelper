@@ -26,7 +26,14 @@
         <activity android:name=".Acitivites.Client_addnew"
             android:theme="@style/themeaddnew"/>
         <activity android:name=".Acitivites.Transaction_listofnames"
-            android:theme="@style/themetransactionlist"/>
+            android:theme="@style/themetransactionlist">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Acitivites.Transaction"
             android:theme="@style/themetransaction"/>
         <activity android:name=".Acitivites.Transaction_Menupage"

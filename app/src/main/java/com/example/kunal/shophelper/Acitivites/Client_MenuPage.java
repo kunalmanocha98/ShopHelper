@@ -1,6 +1,7 @@
 package com.example.kunal.shophelper.Acitivites;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -47,6 +48,13 @@ ConstraintLayout btn_transactionmenu,btn_balance,btn_addclient,btn_calendar,btn_
                 Constants.clearalldata(this);
                 Intent i = new Intent(this, SplashActivity.class);
                 startActivity(i);
+                break;
+            }
+            case R.id.help:{
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                        "mailto", "captainamerica98999@gmail.com", null));
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "");
+                startActivity(Intent.createChooser(emailIntent, null));
                 break;
             }
 

@@ -5,7 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.kunal.shophelper.Acitivites.Transaction_listofnames">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppbarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.Popupoverlay">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
 <android.support.v7.widget.RecyclerView
+    android:layout_below="@id/appbarlayout"
     android:id="@+id/clientcredit_rv"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
