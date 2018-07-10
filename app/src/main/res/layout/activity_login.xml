@@ -78,7 +78,7 @@
                     android:inputType="textPersonName"
                     android:padding="16dp"
                     android:textColor="@color/black"
-                    android:text="kunalboy98@gmail.com" />
+                    android:text="harshitraghav03@yahoo.in" />
                 <View
                     android:id="@+id/greyline"
                     android:layout_width="match_parent"
@@ -98,7 +98,7 @@
                     android:hint="password"
                     android:background="@drawable/customedittextloginpage"
                     android:inputType="numberPassword"
-                    android:text="12345678" />
+                    android:text="123456789" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
     </android.support.constraint.ConstraintLayout>
