@@ -107,7 +107,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             signin();
             showdialog();
         }
-        return;
+
     }
 
     private void storeprefs(String user, String pass) {
