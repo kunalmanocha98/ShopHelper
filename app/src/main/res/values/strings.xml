@@ -3,4 +3,13 @@
 
     <string name="transitionname">commonimg</string>
     <string name="transitiontext">commontext</string>
+    <string name="Dashboard">Dashboard</string>
+    <string name="Transaction">Transaction</string>
+    <string name="Sales">Sales</string>
+    <string name="Chat">Chat</string>
+    <string name="Profile">Profile</string>
+
+
+
 </resources>
+

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import android.widget.Toast
 import com.example.kunal.shophelper.Acitivites.SelectionPage
+import com.example.kunal.shophelper.Dashboard.DashboardActivity
 import com.example.kunal.shophelper.Login.Presenter.LoginPresenter
 import com.example.kunal.shophelper.Login.View.LoginView
 import com.example.kunal.shophelper.R
@@ -28,7 +29,7 @@ class LoginActivity : AppCompatActivity(),LoginView{
             override fun onComplete(task: Task<AuthResult>) {
                 if (task.isSuccessful){
                     mypresenter.storedata(email,pass)
-                    val i=Intent(this@LoginActivity,SelectionPage::class.java)
+                    val i=Intent(this@LoginActivity,DashboardActivity::class.java)
                     startActivity(i)
                     finish()
                 }else{

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bn_dashboard"
+        android:icon="@drawable/bn_dashboard"
+        android:title="@string/Dashboard" />
+    <item
+        android:id="@+id/bn_tranaction"
+        android:title="@string/Transaction"
+        android:icon="@drawable/bn_transaction"/>
+    <item
+        android:id="@+id/bn_sales"
+        android:title="@string/Sales"
+        android:icon="@drawable/bn_sale"/>
+    <item
+        android:id="@+id/bn_chat"
+        android:title="@string/Chat"
+        android:icon="@drawable/bn_chat"/>
+    <item
+        android:id="@+id/bn_profile"
+        android:title="@string/Profile"
+        android:icon="@drawable/bn_profile"/>
+</menu>
