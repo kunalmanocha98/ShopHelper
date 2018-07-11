@@ -54,11 +54,7 @@
         <activity
             android:name=".Acitivites.SplashActivity"
             android:theme="@style/MyTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Acitivites.LoginPreview"
@@ -73,6 +69,15 @@
             android:name=".Login.LoginActivity"
             android:theme="@style/themeloginactivity">
 
+        </activity>
+        <activity
+            android:name=".Splash.SplashActivity"
+            android:theme="@style/MyTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
