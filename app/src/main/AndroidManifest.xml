@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kunal.shophelper">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:name=".ShopHelperApplication"
@@ -19,59 +20,52 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Acitivites.LoginActivity"
-            android:theme="@style/themeloginactivity"/>
-        <activity android:name=".Acitivites.SelectionPage"
-            android:theme="@style/thememenuactivity"/>
-        <activity android:name=".Acitivites.Client_MenuPage"
-            android:theme="@style/themeclientmenu"/>
-        <activity android:name=".Acitivites.Client_addnew"
-            android:theme="@style/themeaddnew"/>
-        <activity android:name=".Acitivites.Transaction_listofnames"
+            android:theme="@style/themeloginactivity" />
+        <activity
+            android:name=".Acitivites.SelectionPage"
+            android:theme="@style/thememenuactivity" />
+        <activity
+            android:name=".Acitivites.Client_MenuPage"
+            android:theme="@style/themeclientmenu" />
+        <activity
+            android:name=".Acitivites.Client_addnew"
+            android:theme="@style/themeaddnew" />
+        <activity
+            android:name=".Acitivites.Transaction_listofnames"
             android:theme="@style/themetransactionlist">
             <meta-data
                 android:name="android.app.searchable"
-                android:resource="@xml/searchable"/>
+                android:resource="@xml/searchable" />
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
         </activity>
-        <activity android:name=".Acitivites.Transaction"
-            android:theme="@style/themetransaction"/>
-        <activity android:name=".Acitivites.Transaction_Menupage"
-            android:theme="@style/themetransactionmenu"/>
-        <activity android:name=".Acitivites.ChatActivity"
-            android:theme="@style/themechat"/>
-        <activity android:name=".Acitivites.Client_Totalbalance"
-            android:theme="@style/themetotalbalance"/>
-        <activity android:name=".Acitivites.DealerMenuActivity"
-            android:theme="@style/themedealermenu"/>
-        <activity android:name=".Acitivites.ClientCalendarPage"
-            android:theme="@style/themecalendar"/>
-        <activity android:name=".Acitivites.AddNoteActivity"
-            android:theme="@style/themecalendar"/>
-        <activity android:name=".Acitivites.NotePreviewActivity"
-            android:theme="@style/themecalendar"/>
+        <activity
+            android:name=".Acitivites.Transaction"
+            android:theme="@style/themetransaction" />
+        <activity
+            android:name=".Acitivites.Transaction_Menupage"
+            android:theme="@style/themetransactionmenu" />
+        <activity
+            android:name=".Acitivites.ChatActivity"
+            android:theme="@style/themechat" />
+        <activity
+            android:name=".Acitivites.Client_Totalbalance"
+            android:theme="@style/themetotalbalance" />
+        <activity
+            android:name=".Acitivites.DealerMenuActivity"
+            android:theme="@style/themedealermenu" />
+        <activity
+            android:name=".Acitivites.ClientCalendarPage"
+            android:theme="@style/themecalendar" />
+        <activity
+            android:name=".Acitivites.AddNoteActivity"
+            android:theme="@style/themecalendar" />
+        <activity
+            android:name=".Acitivites.NotePreviewActivity"
+            android:theme="@style/themecalendar" />
         <activity
             android:name=".Acitivites.SplashActivity"
-            android:theme="@style/MyTheme">
-
-        </activity>
-        <activity
-            android:name=".Acitivites.LoginPreview"
-            android:theme="@style/themeloginpreview" />
-
-        <activity android:name=".Acitivites.GetPhoneNumber"
-            android:theme="@style/themegetphonenumber"
-            android:windowSoftInputMode="adjustResize">
-
-        </activity>
-        <activity
-            android:name=".Login.LoginActivity"
-            android:theme="@style/themeloginactivity">
-
-        </activity>
-        <activity
-            android:name=".Splash.SplashActivity"
             android:theme="@style/MyTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -79,6 +73,36 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Acitivites.LoginPreview"
+            android:theme="@style/themeloginpreview" />
+
+        <activity
+            android:name=".Acitivites.GetPhoneNumber"
+            android:theme="@style/themegetphonenumber"
+            android:windowSoftInputMode="adjustResize">
+
+        </activity>
+
+        <!--new activities-->
+
+        <activity
+            android:name=".Login.LoginActivity"
+            android:theme="@style/themeloginactivity">
+
+        </activity>
+
+        <activity
+            android:name=".Splash.SplashActivity"
+            android:theme="@style/MyTheme">
+        </activity>
+
+        <activity
+            android:name=".Dashboard.DashboardActivity"
+            android:theme="@style/MyTheme">
+
+        </activity>
+
     </application>
 
 </manifest>

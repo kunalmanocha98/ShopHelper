@@ -24,6 +24,7 @@ class SplashActivity:AppCompatActivity(),SplashView {
         Handler().postDelayed({
             var i=Intent(this,LoginActivity::class.java)
             startActivity(i)
+            finish()
 
         },1000)
     }
