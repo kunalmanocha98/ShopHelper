@@ -18,21 +18,21 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : AppCompatActivity(),LoginView{
+class LoginActivity : AppCompatActivity(), LoginView {
     override fun showtoast(stringtoshow: String) {
-        Toast.makeText(this,stringtoshow,Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, stringtoshow, Toast.LENGTH_SHORT).show()
     }
 
-    override fun signin(email:String,pass:String) {
-        val auth= FirebaseAuth.getInstance()
-        auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(this, object :OnCompleteListener<AuthResult>{
+    override fun signin(email: String, pass: String) {
+        val auth = FirebaseAuth.getInstance()
+        auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(this, object : OnCompleteListener<AuthResult> {
             override fun onComplete(task: Task<AuthResult>) {
-                if (task.isSuccessful){
-                    mypresenter.storedata(email,pass)
-                    val i=Intent(this@LoginActivity,DashboardActivity::class.java)
+                if (task.isSuccessful) {
+                    mypresenter.storedata(email, pass)
+                    val i = Intent(this@LoginActivity, DashboardActivity::class.java)
                     startActivity(i)
                     finish()
-                }else{
+                } else {
 
                     showtoast("authentication failed")
                 }
@@ -41,20 +41,20 @@ class LoginActivity : AppCompatActivity(),LoginView{
         })
     }
 
-    lateinit var mypresenter:LoginPresenter<LoginView>
+    lateinit var mypresenter: LoginPresenter<LoginView>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         val dataManager = (application as ShopHelperApplication).getDataManager()
-        mypresenter= LoginPresenter(dataManager)
+        mypresenter = LoginPresenter(dataManager)
         mypresenter.onAttach(this)
         mypresenter.checkprefs()
     }
 
     override fun onResume() {
         super.onResume()
-        btn_signin.setOnClickListener{
-           mypresenter.signin(iptxt_user.text.toString(),iptxt_pass.text.toString())
+        btn_signin.setOnClickListener {
+            mypresenter.signin(iptxt_user.text.toString(), iptxt_pass.text.toString())
         }
     }
 }

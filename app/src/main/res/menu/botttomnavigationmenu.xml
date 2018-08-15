@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/bn_dashboard"
+        android:id="@+id/bn_home"
         android:icon="@drawable/bn_dashboard"
         android:title="@string/Dashboard" />
     <item

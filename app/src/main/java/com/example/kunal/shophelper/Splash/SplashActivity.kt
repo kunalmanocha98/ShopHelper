@@ -9,23 +9,21 @@ import com.example.kunal.shophelper.R
 import com.example.kunal.shophelper.ShopHelperApplication
 import com.example.kunal.shophelper.Splash.Presenter.Splashpresenter
 import com.example.kunal.shophelper.Splash.View.SplashView
-lateinit var mypresenter:Splashpresenter<SplashView>
+
 class SplashActivity:AppCompatActivity(),SplashView {
+    lateinit var mypresenter:Splashpresenter<SplashView>
+    override fun startintent(intent: Intent) {
+        startActivity(intent)
+        finish()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         var dataManager=(application as ShopHelperApplication).getDataManager()
-        mypresenter= Splashpresenter(dataManager)
+        mypresenter= Splashpresenter(dataManager,this)
         mypresenter.onattach(this)
-        runhandler()
+        mypresenter.runhandler(1000)
     }
 
-    private fun runhandler() {
-        Handler().postDelayed({
-            var i=Intent(this,LoginActivity::class.java)
-            startActivity(i)
-            finish()
-
-        },1000)
-    }
 }

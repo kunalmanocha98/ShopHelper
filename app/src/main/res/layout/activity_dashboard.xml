@@ -7,17 +7,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <android.support.v7.widget.ContentFrameLayout
+            android:id="@+id/frame_container"
             android:layout_height="match_parent"
             android:layout_width="match_parent">
         </android.support.v7.widget.ContentFrameLayout>
         <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bn_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             app:menu="@menu/botttomnavigationmenu"
             app:itemIconTint="@color/whitecolor"
             app:itemBackground="@color/black"
-            app:itemTextColor="@color/whitecolor">
+            app:itemTextColor="@color/whitecolor"
+            android:defaultFocusHighlightEnabled="false">
 
         </android.support.design.widget.BottomNavigationView>
 

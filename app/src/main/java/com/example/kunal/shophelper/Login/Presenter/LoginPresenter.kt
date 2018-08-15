@@ -1,6 +1,5 @@
 package com.example.kunal.shophelper.Login.Presenter
 
-import android.widget.Toast
 import com.example.kunal.shophelper.DataManager
 import com.example.kunal.shophelper.Login.View.LoginView
 
@@ -12,7 +11,7 @@ class LoginPresenter<V:LoginView>(dataManager: DataManager):LoginPresenterInterf
 
     override fun signin(user:String, pass:String) {
         if (isvalid(user,pass)) {
-            mvpView?.signin(user,pass)
+            mvpView!!.signin(user,pass)
         }
     }
 

@@ -12,6 +12,10 @@
     <color name="lightblue">#30bcf1</color>
     <color name="lightgreen">#34c127</color>
 
+    <color name="testgreen">#8BC34A</color>
+    <color name="testgrey">#d1d0d0</color>
+    <color name="testblack">#484747</color>
+
 
     <color name="logoblue">#157ac8</color>
     <color name="logoblue1">#1895f5</color>
