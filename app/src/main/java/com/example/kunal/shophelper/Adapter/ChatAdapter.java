@@ -64,7 +64,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         }else{
             return left;
         }
-//        return super.getItemViewType(position);
+        
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

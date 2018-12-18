@@ -94,15 +94,19 @@
 
         <activity
             android:name=".Splash.SplashActivity"
-            android:theme="@style/MyTheme">
-
-        </activity>
+            android:theme="@style/MyTheme"></activity>
 
         <activity
             android:name=".Dashboard.DashboardActivity"
-            android:theme="@style/themedashboard">
-        </activity>
+            android:theme="@style/themedashboard"></activity>
+        <activity
+            android:name=".Profile.ProfileActivity"
+            android:theme="@style/MyTheme">
 
+        </activity>
+        <activity
+            android:name=".NewEntry.NewEntryActivity"
+            android:theme="@style/NewEntryPage"></activity>
 
     </application>
 

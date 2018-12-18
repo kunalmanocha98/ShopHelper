@@ -12,6 +12,7 @@ import java.util.Calendar;
  */
 
 public class MyEventDay extends EventDay implements Parcelable {
+
     private String mNote;
     public MyEventDay(Calendar day, int imageResource, String note) {
         super(day, imageResource);
@@ -34,6 +35,7 @@ public class MyEventDay extends EventDay implements Parcelable {
             return new MyEventDay[size];
         }
     };
+
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeSerializable(getCalendar());

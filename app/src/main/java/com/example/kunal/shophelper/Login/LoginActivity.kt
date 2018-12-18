@@ -48,7 +48,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
         val dataManager = (application as ShopHelperApplication).getDataManager()
         mypresenter = LoginPresenter(dataManager)
         mypresenter.onAttach(this)
-        mypresenter.checkprefs()
+//        mypresenter.checkprefs()
     }
 
     override fun onResume() {

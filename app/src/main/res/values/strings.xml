@@ -8,8 +8,10 @@
     <string name="Sales">Sales</string>
     <string name="Chat">Chat</string>
     <string name="Profile">Profile</string>
-
-
-
+    <string-array name="payment_method">
+        <item>Cash</item>
+        <item>Card</item>
+        <item>Online</item>
+    </string-array>
 </resources>
 

@@ -11,9 +11,9 @@
         android:id="@+id/logolayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
         android:padding="12dp"
         app:layout_constraintBottom_toTopOf="@id/userandpasslayout"
-        android:layout_marginBottom="50dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -32,14 +32,14 @@
             android:id="@+id/hellotext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
             android:text="Sign in!"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="48sp"
-            android:layout_marginRight="20dp"
-            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/icon"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
@@ -53,17 +53,17 @@
         app:layout_constraintTop_toBottomOf="@id/logolayout">
 
         <android.support.v7.widget.CardView
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="70dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="40dp"
+            app:cardBackgroundColor="@color/whitecolor"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="32dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:cardElevation="32dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/whitecolor">
+            app:layout_constraintTop_toTopOf="parent">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -75,62 +75,65 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/customedittextloginpage"
                     android:hint="Username"
+                    android:text="kunalmanocha98@gmail.com"
                     android:inputType="textPersonName"
                     android:padding="16dp"
-                    android:textColor="@color/black"
-                    android:text="harshitraghav03@yahoo.in" />
+                    android:textColor="@color/black" />
+
                 <View
                     android:id="@+id/greyline"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
+                    android:layout_below="@id/iptxt_user"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:layout_below="@id/iptxt_user"
-                    android:background="@color/grey"/>
+                    android:background="@color/grey" />
 
                 <com.example.kunal.shophelper.Fonts.MyCustomEditText
                     android:id="@+id/iptxt_pass"
-                    android:padding="16dp"
-                    android:textColor="@color/black"
-                    android:layout_below="@id/greyline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="password"
+                    android:layout_below="@id/greyline"
                     android:background="@drawable/customedittextloginpage"
-                    android:inputType="numberPassword"
-                    android:text="123456789" />
+                    android:hint="password"
+                    android:inputType="textPassword"
+                    android:padding="16dp"
+                    android:text="ilchicken989"
+                    android:textColor="@color/black" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
     </android.support.constraint.ConstraintLayout>
-<android.support.constraint.ConstraintLayout
-    android:id="@+id/btn_layout"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/userandpasslayout"
-    android:layout_width="0dp"
-    android:layout_height="0dp">
-    <Button
-        android:id="@+id/btn_signin"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="40dp"
-        android:background="@drawable/custombuttonlogin"
-        android:text="SignIn"
-        android:textColor="@color/whitecolor"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
 
-    <Button
-        android:id="@+id/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:text="logout"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_signin"
-        tools:layout_editor_absoluteX="165dp" />
-</android.support.constraint.ConstraintLayout>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userandpasslayout">
+
+        <Button
+            android:id="@+id/btn_signin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="40dp"
+            android:background="@drawable/custombuttonlogin"
+            android:text="SignIn"
+            android:textColor="@color/whitecolor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_signin"
+            tools:layout_editor_absoluteX="165dp" />
+    </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>

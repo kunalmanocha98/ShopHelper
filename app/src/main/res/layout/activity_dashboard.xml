@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
+
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <android.support.v7.widget.ContentFrameLayout
-            android:id="@+id/frame_container"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent">
-        </android.support.v7.widget.ContentFrameLayout>
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/bn_view"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            app:menu="@menu/botttomnavigationmenu"
-            app:itemIconTint="@color/whitecolor"
-            app:itemBackground="@color/black"
-            app:itemTextColor="@color/whitecolor"
-            android:defaultFocusHighlightEnabled="false">
+            android:layout_height="match_parent">
 
-        </android.support.design.widget.BottomNavigationView>
+            <android.support.design.widget.BottomNavigationView
+                android:id="@+id/bn_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:itemBackground="@color/black"
+                app:itemIconTint="@color/whitecolor"
+                app:itemTextColor="@color/whitecolor"
+                app:menu="@menu/botttomnavigationmenu">
 
+            </android.support.design.widget.BottomNavigationView>
+
+            <android.support.v7.widget.ContentFrameLayout
+                android:id="@+id/frame_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bn_view"></android.support.v7.widget.ContentFrameLayout>
+        </RelativeLayout>
     </android.support.design.widget.CoordinatorLayout>
 
 </android.support.constraint.ConstraintLayout>

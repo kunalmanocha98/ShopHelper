@@ -8,7 +8,7 @@ import android.view.MenuItem
 import com.example.kunal.shophelper.Dashboard.Presenter.DashboardPresenter
 import com.example.kunal.shophelper.Dashboard.View.DashboardView
 import com.example.kunal.shophelper.Home.HomeFragment
-import com.example.kunal.shophelper.Profile.ProfileFragment
+import com.example.kunal.shophelper.UserProfile.UserUserProfileFragment
 import com.example.kunal.shophelper.R
 import com.example.kunal.shophelper.Sales.SalesFragment
 import com.example.kunal.shophelper.ShopHelperApplication
@@ -57,7 +57,7 @@ class DashboardActivity: AppCompatActivity(),DashboardView{
                     return true
                 }
                 R.id.bn_profile ->{
-                    fragment=ProfileFragment()
+                    fragment=UserUserProfileFragment()
                     loadfragment(fragment)
                     return true
                 }

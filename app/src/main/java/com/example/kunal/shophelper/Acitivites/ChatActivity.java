@@ -112,7 +112,6 @@ public class ChatActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         int position=recyclerView.getAdapter().getItemCount()-1;
         recyclerView.scrollToPosition(position);
-//        rv.smoothScrollToPosition(position);
         adapter.notifyDataSetChanged();
 
 

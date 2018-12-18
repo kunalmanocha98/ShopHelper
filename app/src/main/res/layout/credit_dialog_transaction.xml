@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/whitecolor"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/whitecolor">
+            <RelativeLayout
+                android:id="@+id/wrapper_user_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/wrapper_indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_content_wrapper_txt_indicator"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/txt_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:gravity="center"
+                        android:text="B"
+                        android:textColor="@color/whitecolor"
+                        android:textSize="32sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txt_shopname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@id/wrapper_indicator"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="Bhagwati II"
+                    android:textColor="@color/black"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_shopname"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@id/wrapper_indicator"
+                    android:text="Manoj Kumar"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_amount_txt_view"
+                    android:gravity="center"
+                    android:minWidth="60dp"
+                    android:padding="2dp"
+                    android:text="₹5000"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_enter_amount_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wrapper_user_details"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Amount Paid"
+                android:textAllCaps="true"
+                android:textColor="@color/testblack"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edt_enter_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_enter_amount_indicator"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_custom_edit_text_dialog"
+                android:maxLines="1"
+                android:hint="Enter Amount"
+                android:paddingBottom="16dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="8dp"
+                android:textColorHint="@color/testgrey"
+                android:paddingTop="16dp"
+                android:textColor="@color/testblack" />
+
+           <!-- <TextView
+                android:id="@+id/txt_enter_collection_person_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_enter_amount"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Collecter"
+                android:textAllCaps="true"
+                android:textColor="@color/testblack"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edt_collection_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_enter_collection_person_indicator"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_custom_edit_text_dialog"
+                android:maxLines="1"
+                android:paddingBottom="16dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="8dp"
+                android:paddingTop="16dp"
+                android:hint="Select the Collector's Name"
+                android:textColorHint="@color/testgrey"
+                android:textColor="@color/testblack" />-->
+            <TextView
+                android:id="@+id/txt_enter_mode_of_payment_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_enter_amount"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Payment Method"
+                android:textAllCaps="true"
+                android:textColor="@color/testblack"
+                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/edt_enter_mode_of_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_enter_mode_of_payment_indicator"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_custom_edit_text_dialog"
+                android:maxLines="1"
+                android:text="CASH"
+                android:paddingBottom="16dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="8dp"
+                android:paddingTop="16dp"
+                android:hint="Enter Payment Method"
+                android:textColorHint="@color/testgrey"
+                android:textColor="@color/testblack" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/btn_add_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/edt_enter_mode_of_payment"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="32dp"
+                app:cardBackgroundColor="@color/testgreen">
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="Add Payment"
+                        android:textColor="@color/whitecolor" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/btn_cancel_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_enter_mode_of_payment"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_toLeftOf="@id/btn_add_payment"
+                app:cardBackgroundColor="@color/testgrey">
+
+                <RelativeLayout
+                    android:id="@+id/rl_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="Cancel"
+                        android:textColor="@color/whitecolor" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
