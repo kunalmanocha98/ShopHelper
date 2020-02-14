@@ -51,9 +51,11 @@ public class Client_Totalbalance extends AppCompatActivity {
                 Iterable<DataSnapshot> arr = dataSnapshot.getChildren();
                 while (arr.iterator().hasNext()) {
                     String name=(arr.iterator().next().getKey());
+                    assert name != null;
                     String shopnumber= (String) dataSnapshot.child(name).child("personal information").child("shopnumber").getValue();
                     String phonenumber=(String) dataSnapshot.child(name).child("personal information").child("phonenumber").getValue();
                     String totalbalance=(String) dataSnapshot.child(name).child("balance").child("total").getValue();
+                    assert totalbalance != null;
                     piedata.add(new PieEntry(Float.parseFloat(totalbalance),name));
                     TotalBalanceData data=new TotalBalanceData(name,shopnumber,phonenumber,totalbalance);
                     list.add(data);
@@ -79,7 +81,6 @@ public class Client_Totalbalance extends AppCompatActivity {
         data.setValueTextSize(10f);
         data.setValueTextColor(Color.BLACK);
          piechart.setData(data);
-
     }
 
     private void setuppiechart() {
@@ -96,5 +97,10 @@ public class Client_Totalbalance extends AppCompatActivity {
     private void recyclerview() {
         adapter = new TotalBalanceAdapter(this,list);
         rv_totalbalance.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
